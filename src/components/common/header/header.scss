@@ -1,0 +1,59 @@
+@import "../../../scss/Variables.scss";
+@import "../../../scss/Mixin.scss";
+header{
+    @include flex(space-between,center);
+    padding: 10px 80px ;
+    background-color: $clr-background-pale;
+    box-shadow: 0 5px 15px $clr-shadow;
+    z-index: 9999;
+    position: sticky;
+    top: 0;
+   
+    left: 0;
+}
+
+header nav ul{
+    @include flex(space-between,center);
+    flex-direction: row-reverse;
+    li{
+        padding: 0px 20px;
+        position: relative;
+        a{
+            font-size: 18px;
+            font-weight: 600;
+            color: $clr-black-a;
+            transition: 0.3s;
+          
+        }
+    }
+}
+header nav ul li a:hover,
+header nav ul li a.active{
+    color: $clr-main;
+}
+
+header nav ul li a:hover:after,
+header nav ul li a.active:after{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 2.5px;
+    background-color: $clr-main;
+    bottom: -4px;
+    right: 20px;
+}
+header nav ul li a i{
+    margin-left: 5px;
+    line-height: 10px;
+    font-size: 18px;
+    bottom: -10px;  
+}
+header .logo{
+    width: 65px;
+    height: 65px;
+}
+header .logo img{
+    width: 100%;
+    height: 100%;
+  
+}
