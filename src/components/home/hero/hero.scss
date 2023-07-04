@@ -1,0 +1,41 @@
+@import "../../../scss/Mixin.scss";
+@import "../../../scss/Variables.scss";
+
+#hero{
+    background-image:url("../../../../public/hero/equipment-researchers.jpg") ;
+    height: 90vh;
+    background-position: center;
+    background-size: cover;
+    @include flex(center,flex-end);
+    flex-direction: column
+}
+#hero h4{
+    font-size: 20px;
+    color: $clr-black-pale;
+    margin-bottom: 15px;
+}
+#hero h1{
+    font-size: 40px;
+    line-height: 64px;
+    font-weight: 600;
+    color: $clr-main;
+}
+#hero h2{
+    font-size: 36px;
+    line-height: 54px;
+    color: #222;
+}
+#hero p{
+    font-size: 16px;
+    color: #222;
+}
+#hero button{
+    padding: 20px 40px;
+    background-color: $clr-main;
+    margin-top: 20px;
+    color: $clr-white;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+}

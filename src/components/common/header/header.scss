@@ -8,7 +8,7 @@ header{
     z-index: 9999;
     position: sticky;
     top: 0;
-   
+    height: 10vh;
     left: 0;
 }
 
@@ -19,7 +19,7 @@ header nav ul{
         padding: 0px 20px;
         position: relative;
         a{
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
             color: $clr-black-a;
             transition: 0.3s;

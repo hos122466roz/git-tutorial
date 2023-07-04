@@ -1,6 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200&family=Rubik:ital,wght@1,300&family=Tajawal:wght@300&display=swap');
 @import "./scss/Variables.scss";
- 
+@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: normal;
+  src: url('../public/fonts/Vazir.eot');
+  src: url('../public/fonts/Vazir.eot?#iefix') format('embedded-opentype'), 
+  url('../public/fonts/Vazir.woff2') format('woff2'), 
+  url('../public/fonts/Vazir.woff') format('woff'), 
+  url('../public/fonts/Vazir.ttf') format('truetype');
+ }
+ @font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: bold;
+  src: url('../public/fonts/Vazir-Bold.eot');
+  src: url('../public/fonts/Vazir-Bold.eot?#iefix') format('embedded-opentype'), 
+  url('../public/fonts/Vazir-Bold.woff2') format('woff2'), 
+  url('../public/fonts/Vazir-Bold.woff') format('woff'), 
+  url('../public/fonts/Vazir-Bold.ttf') format('truetype');
+ }
 *{
   margin: 0;
   padding: 0;
@@ -8,7 +27,9 @@
 }
 body{
   width: 100%;
-  font-family: 'Rubik', sans-serif;
+  // font-family: 'Rubik', sans-serif;
+  font-family: 'Vazir', Arial, sans-serif;
+
 }
 .section-p1{
   padding: 40px 80px;
@@ -20,6 +41,24 @@ button{
   border: none;
   outline: none;
   background: none;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Vazir', Arial, sans-serif;
+}
+button::after{
+  background-color: $clr-white-pale;
+  content: "";
+  transition: 0.5s;
+
+  height: 100%;
+  width: 30px;
+  position: absolute;
+  top: 0;
+  left: -30px;
+}
+button:hover:after{
+  //  transform:translateX(180px) ;
+  left: 100%;
 }
 button.white{
   font-size: 13px;

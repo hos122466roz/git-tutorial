@@ -1,14 +1,15 @@
 import React from 'react';
-import { Route, Router } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Header from '../common/header/Header';
+import Home from '../home/hero/Home';
 
 const Pages = () => {
     return (
         <>
             <Header/>
-            {/* <Router>
-                
-            </Router> */}
+            <Routes>
+                <Route path='/' element={<Home/>}/>
+            </Routes>
         </>
     );
 };
