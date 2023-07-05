@@ -12,7 +12,7 @@ header{
     left: 0;
 }
 
-header nav ul{
+header nav .nav{
     @include flex(space-between,center);
     flex-direction: row-reverse;
     li{
@@ -27,13 +27,13 @@ header nav ul{
         }
     }
 }
-header nav ul li a:hover,
-header nav ul li a.active{
+header  ul li a:hover,
+header  ul li a.active{
     color: $clr-main;
 }
 
-header nav ul li a:hover:after,
-header nav ul li a.active:after{
+header  ul li a:hover:after,
+header  ul li a.active:after{
     content: "";
     position: absolute;
     width: 30%;
@@ -42,7 +42,7 @@ header nav ul li a.active:after{
     bottom: -4px;
     right: 20px;
 }
-header nav ul li a i{
+header  ul li a i{
     margin-left: 5px;
     line-height: 10px;
     font-size: 18px;
@@ -56,4 +56,59 @@ header .logo img{
     width: 100%;
     height: 100%;
   
+}
+header .toggle{
+    display: none;
+}
+header .show{
+    display: none;
+}
+@media screen and (max-width:768px) {
+    header .toggle{
+        display: block;
+        font-size: 35px;
+        color: $clr-black-pale;
+    }
+    header ul.nav{
+        display: none;
+    }
+    header ul.mobile-nav{
+        height: 100vh;
+        position: absolute;
+        top: 10vh;
+        text-align: right;
+        padding-top: 40px;
+        z-index: 100;
+        padding-right: 20px;
+        right: 0;
+        flex-direction: row;
+        animation: all 3s ease;
+        width: 50%;
+        background-color: $clr-background-pale;
+    }
+   
+    header ul.mobile-nav::after{
+        content: "";
+        z-index: 50;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.678);
+        top: -10vh;
+        right:100%;
+    }
+    header ul.mobile-nav li{
+        margin-bottom: 25px;
+        font-size: 18px;
+
+    }
+}
+@media screen and (max-width:460px) {
+    header{
+        padding: 10px 20px;      
+    }
+    header ul.mobile-nav{
+        width: 100%;
+    }
+
 }

@@ -1,0 +1,58 @@
+@import "../../../scss/Mixin.scss";
+@import "../../../scss/Variables.scss";
+
+#feature{
+    background-color: $clr-background-pale;
+    padding-top: 60px;
+}
+#feature .grid{
+    @include grid(4,30px)
+}
+#feature .box{
+    background-color: $clr-white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+#feature .box i{
+    position: absolute;
+    margin-top: -50px;
+    transform: translateX(-50%);
+    padding: 20px;
+    left: 50%;
+    border: 5px solid $clr-background-pale;
+    font-size: 20px;
+    background-color: $clr-main; 
+    border-radius: 50%;
+    color: $clr-white;
+}
+
+#feature .box .details{
+    margin-top: 20px;
+    span{
+        font-size: 40px;
+        font-weight: 700;
+        color: $clr-black-pale;
+    }
+    p{
+            font-weight: 600;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    #feature .grid{
+        @include grid(2,30px)
+    }
+    #feature .grid .box{
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width:460px) {
+    #feature .grid{
+        @include grid(1,30px)
+    }
+    #feature .box{
+        padding: 10px;
+    }
+}

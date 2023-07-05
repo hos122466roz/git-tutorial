@@ -28,6 +28,7 @@
 body{
   width: 100%;
   // font-family: 'Rubik', sans-serif;
+  position: relative;
   font-family: 'Vazir', Arial, sans-serif;
 
 }
@@ -36,6 +37,15 @@ body{
 }
 .section-m1{
   margin: 40px 0;
+}
+h2{
+  font-size: 36px;
+  line-height: 54px;
+  color: #222;
+}
+p{
+  font-size: 16px;
+  color: #222;
 }
 button{
   border: none;
@@ -48,8 +58,6 @@ button{
 button::after{
   background-color: $clr-white-pale;
   content: "";
-  transition: 0.5s;
-
   height: 100%;
   width: 30px;
   position: absolute;
@@ -58,6 +66,8 @@ button::after{
 }
 button:hover:after{
   //  transform:translateX(180px) ;
+  transition: 0.5s;
+
   left: 100%;
 }
 button.white{
@@ -77,4 +87,10 @@ li{
 }
 a{
   text-decoration: none;
+}
+@media screen and (max-width:460px) {
+  .section-p1{
+    padding: 20px 20px;
+  }
+  
 }
